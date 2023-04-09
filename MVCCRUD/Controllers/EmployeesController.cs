@@ -47,7 +47,7 @@ namespace MVCCRUD.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> View(Guid id) 
+        public async Task<IActionResult> View(Guid id) 
         {
             var selectedEmployee = await mvcDemoDbContext.Employees.FirstOrDefaultAsync(x => x.Id == id);
 
